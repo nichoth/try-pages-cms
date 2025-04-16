@@ -22,6 +22,10 @@ content:
       - name: body
         label: Body
         type: rich-text
+      - name: picture
+        label: an image
+        type: image
+        description: Image to go with the post
   - name: site
     label: Site settings
     path: src/_data/site.json
