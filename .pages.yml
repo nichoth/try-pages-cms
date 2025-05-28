@@ -2,30 +2,40 @@ media:
   input: src/assets
   output: /assets
 content:
-  - name: posts
-    label: Posts
+  - name: products
+    label: Products
     type: collection
-    path: 'src/posts'
-    view:
-      fields: [ title, published, date ]
+    filename: '{fields.slug}.md'
+    path: 'src/products'
     fields:
-      - name: published
-        label: Published
-        type: boolean
-        default: true
-      - name: date
-        label: Date
-        type: date
       - name: title
         label: Title
         type: string
-      - name: body
-        label: Body
-        type: rich-text
-      - name: picture
-        label: an image
+      - name: quantity
+        label: Quantity
+        type: number
+        default: 1
+        options:
+          min: 0
+      - name: slug
+        pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
+        maxlength: 600  # kind of arbitrary
+        label: Slug
+        type: string
+        placeholder: abc-123
+        description: The page's path in the URL, e.g. `example-path`
+      - name: visible
+        label: Visible
+        type: boolean
+        default: true
+      - name: images
+        label: Image
         type: image
-        description: Image to go with the post
+        description: An image inside the post
+        options:
+          multiple:
+            min: 1
+            max: 10
   - name: site
     label: Site settings
     path: src/_data/site.json
