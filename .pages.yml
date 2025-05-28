@@ -29,7 +29,7 @@ content:
         type: boolean
         default: true
       - name: images
-        label: Image
+        label: Images
         type: image
         description: An image inside the post
         options:
