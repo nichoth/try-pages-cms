@@ -33,9 +33,7 @@ content:
         type: image
         description: An image inside the post
         options:
-          multiple:
-            min: 1
-            max: 10
+          multiple: true
   - name: site
     label: Site settings
     path: src/_data/site.json
