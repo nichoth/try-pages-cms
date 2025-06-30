@@ -28,7 +28,7 @@
     "@substrate-system/debug": "^0.7.18",
     "@substrate-system/tapzero": "^0.10.13",
     "@netlify/functions": "^3.1.10",
-    "@preact/preset-vite": "^2.9.4",
+    "@preact/preset-vite": "^2.10.2",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.33.0",
     "auto-changelog": "^2.4.0",
